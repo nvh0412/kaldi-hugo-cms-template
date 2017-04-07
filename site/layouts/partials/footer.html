@@ -1,57 +1,47 @@
-<footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
-
-			{{ partial "newsletter-form" . }}
-
+<footer class="container">
+	<div class="row widget">
+		<div class="col-md-4">
+			<ul class="menu">
+				<li><a href="#">Support</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Blog</a></li>
+			</ul>
 		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "vimeo") }}
-				</ul>
-			</div>
-
+		<div class="col-md-4">
+			<ul class="menu">
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+				<img alt=""
+				src="https://yj4dfcucm3mswcd2nbkkg14m-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Technology-Partner-Logo.png" data-lazy-type="image" data-lazy-src="https://yj4dfcucm3mswcd2nbkkg14m-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/Technology-Partner-Logo.png"
+				width="200" height="68" border="0"
+				class="lazy full-width lazy-loaded">
 		</div>
 	</div>
-
 </footer>
 
-{{ partial "svg" . }}
-
-<script src="/app.js"></script>
-
-</body>
-
-</html>
+<footer class="container">
+	<div class="row scocial-global">
+		<a href="https://www.facebook.com/amazonjunglescout/" class="facebook" title="Facebook" target="_blank">
+			<i class="x-icon-facebook-square" data-x-icon="" aria-hidden="true"></i>
+		</a>
+		<a href="https://twitter.com/junglescout" class="twitter" title="Twitter" target="_blank">
+			<i class="x-icon-twitter-square" data-x-icon="" aria-hidden="true"></i>
+		</a>
+		<a href="https://www.linkedin.com/company/6608249?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A6608249%2Cidx%3A2-1-2%2CtarId%3A1469809982331%2Ctas%3Ajungle%20scout" class="linkedin" title="LinkedIn" target="_blank">
+			<i class="x-icon-linkedin-square" data-x-icon="" aria-hidden="true"></i>
+		</a>
+		<a href="https://www.youtube.com/channel/UC0iJ3ldvDUGiUPfGiiifzVQ" class="youtube" title="YouTube" target="_blank">
+			<i class="x-icon-youtube-square" data-x-icon="" aria-hidden="true"></i>
+		</a>
+	</div>
+	<div class="row">
+		<div class="colophon-content">
+      © Jordan Education 2017
+			<br>
+			Disclaimer: Jordan Education is in no way affiliated with Amazon or any of it's subsidiaries.
+		</div>
+	</div>
+</footer>

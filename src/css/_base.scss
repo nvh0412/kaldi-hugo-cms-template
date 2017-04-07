@@ -1,0 +1,113 @@
+@import 'variables';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.video--responsed {
+  width: auto;
+  height: 100%;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.button--turquoise {
+  color: #fff;
+  background-color: #02ccba;
+  border: 0.125rem solid transparent;
+
+  display: block;
+  cursor: pointer;
+  appearance: none;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  text-decoration: none;
+  vertical-align: middle;
+  height: 3rem;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  line-height: 2.625rem;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0.25rem;
+  letter-spacing: 0.125rem;
+  transition: all 0.3s ease;
+}
+
+.nav {
+  li {
+    a:hover {
+      background-color: white;
+    }
+  }
+}
+
+.white {
+  color: white;
+}
+
+h6, .h6 {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+}
+
+p {
+  &.legible {
+    max-width: 48.75rem;
+  }
+
+  &.small {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skew {
+  transform: skew(0deg,3deg);
+}
+
+.orange-gradient {
+  background: linear-gradient(to right,rgba(252,184,101,1) 0%,rgba(248,153,32,1) 100%);
+}
+
+[data-x-icon], [class*="x-icon-"] {
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-x-icon]:before, [class*="x-icon-"]:before {
+  content: attr(data-x-icon);
+  line-height: 1;
+}

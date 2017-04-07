@@ -4,6 +4,7 @@ import gutil from "gulp-util";
 import postcss from "gulp-postcss";
 import cssImport from "postcss-import";
 import cssnext from "postcss-cssnext";
+import sass from 'gulp-sass';
 import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
@@ -35,16 +36,15 @@ gulp.task("cms", () => {
 gulp.task("build", ["css", "js", "hugo", "cms"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
-gulp.task("css", () => (
-  gulp.src("./src/css/*.css")
-    .pipe(postcss([
-      cssImport({from: "./src/css/main.css"}),
-      cssnext(),
-      cssnano(),
-    ]))
+gulp.task("sass", () => (
+  gulp.src("./src/css/*.scss")
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream())
 ));
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/css/*.scss', ['sass']);
+});
 
 gulp.task("js", (cb) => {
   const myConfig = Object.assign({}, webpackConfig);
@@ -76,7 +76,34 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "js", "svg", "cms"], () => {
+gulp.task("server", ["hugo", "sass", "js", "svg", "cms"], () => {
+  browserSync.init({
+    server: {
+      baseDir: "./dist"
+    }
+  });
+  gulp.watch("./src/js/**/*.js", ["js"]);
+  gulp.watch("./src/css/**/*.css", ["css"]);
+  gulp.watch("./src/cms/*", ["cms"]);
+  gulp.watch("./site/static/img/icons/*.svg", ["svg"]);
+  gulp.watch("./site/**/*", ["hugo"]);
+});
+
+function buildSite(cb, options) {
+  const args = options ? defaultArgs.concat(options) : defaultArgs;
+
+  return cp.spawn(hugoBin, args, {stdio: "inherit"}).on("close", (code) => {
+    if (code === 0) {
+      browserSync.reload("notify:false");
+      cb();
+    } else {
+      browserSync.notify("Hugo build failed :(");
+      cb("Hugo build failed");
+    }
+  });
+}
+
+gulp.task("dev", ["hugo", "sass:watch", "js", "svg", "cms"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
