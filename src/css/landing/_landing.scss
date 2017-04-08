@@ -164,6 +164,10 @@
         transform: translateY(-50%);
      }
   }
+
+  .features__column--content {
+    h3 { font-family: 'Open Sans'; }
+  }
 }
 
 .classroom__intro {
@@ -346,6 +350,7 @@
     h3 {
       font-size: 1.75rem;
       line-height: 2.25rem;
+      font-family: 'Open Sans';
     }
 
     .dash-blue {
@@ -363,5 +368,33 @@
 
   img{
     max-width: 800px;
+  }
+}
+
+.module-contact {
+  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2013/06/Amazon-warehouse.jpg);
+  background-size: cover;
+  background-position: 50% 5px;
+  text-align: center;
+  color: white;
+  margin-top: 3.75rem;
+  padding: 45px 0px;
+
+  .text-above {
+    margin-bottom: 0.5em;
+  }
+
+  .number {
+    font-size: 3.25em;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  .text-below {
+    display: block;
+    letter-spacing: 0.125em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-top: 0.5em;
   }
 }
