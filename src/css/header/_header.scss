@@ -27,12 +27,13 @@
       }
 
       a {
-        color: $color-blue-black;
+        color: white;
         font-size: 14px;
         line-height: 31px;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
         &:hover, &:focus {
+          background-color: transparent;
           text-decoration: none;
         }
       }

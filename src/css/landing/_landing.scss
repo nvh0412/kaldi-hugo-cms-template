@@ -13,6 +13,23 @@
 }
 
 .video__featured {
+  &:before {
+    content: '';
+    width: 100%;
+    height: 660px;
+    z-index: -1000;
+    background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+    transform-origin: left bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: skew(0deg, -15deg);
+    -moz-transform: skew(0deg, -15deg);
+    -ms-transform: skew(0deg, -15deg);
+    -o-transform: skew(0deg, -15deg);
+    transform: skew(0deg, -15deg);
+  }
+
   .contain {
     background-image: url(https://d125fmws0bore1.cloudfront.net/assets/pages/ndop/nd018/video-bg-nd018-5b3d3b07b74a58ff76503d75b3568908ca9188ce349a9a6c09f1643e46cbfe24.jpg);
     background-size: cover;
@@ -94,6 +111,7 @@
 .simplify-section {
   text-align: center;
   margin-top: 145px;
+  padding-bottom: 3.75rem;
 
   h3 {
     font-size: 36px;
@@ -107,7 +125,7 @@
       margin-bottom: 10px;
       width: 60px;
     }
-    .title { font-size: 1.5em; line-height: 1.2; color: $color-orange; }
+    .title { font-size: 1.5em; line-height: 1.2; color: #02b3e4; }
     .content { margin-top: 8px; }
   }
 }
@@ -242,5 +260,108 @@
     height: 209px;
     width: 325px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+  }
+}
+
+.testimonials {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+
+  h6 {
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #7d97ad;
+  }
+}
+
+.arrow-slider {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+
+.arrow-slider-block {
+  .flex-control-nav {
+    display: none;
+  }
+
+  .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .flex-nav-prev {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      a {
+        display: block;
+        height: 100%;
+        transition: opacity 0.3s ease;
+        text-indent: -999em;
+        opacity: .7;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .flex-nav-next {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      a {
+        display: block;
+        height: 100%;
+        transition: opacity 0.3s ease;
+        text-indent: -999em;
+        opacity: .7;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.75em;
+      }
+    }
+  }
+
+  .flex-prev {
+    background-image: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon-arrow-quotes-left-2617335b94518490c4f6758eb19c4350ceecd9f79056f99fa09722978307180d.svg) !important
+  }
+
+  .flex-next {
+    background-image: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon-arrow-quotes-right-2031727bac4f0b4cc31bf6b6e844d569ffca779ba65381f687cc035dfab902b2.svg) !important
+  }
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  blockquote {
+    padding: 0 8.125em;
+    text-align: center;
+    border-left: none;
+
+    h3 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+
+    .dash-blue {
+      height: 0.125rem;
+      width: 0.8125rem;
+      margin-right: 0.8125rem;
+      vertical-align: middle;
+      background-color: #2e3d49;
+    }
+  }
+}
+
+.benefits-img {
+  text-align: center;
+
+  img{
+    max-width: 800px;
   }
 }
