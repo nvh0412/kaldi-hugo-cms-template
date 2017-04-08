@@ -95,14 +95,19 @@
   text-align: center;
   margin-top: 145px;
 
+  h3 {
+    font-size: 36px;
+    color: #525d7d;
+  }
+
   .simplify-item {
     margin-top: 65px;
 
     .icon {
       margin-bottom: 10px;
-      img { width: 60px; }
+      width: 60px;
     }
-    .title {  }
+    .title { font-size: 1.5em; line-height: 1.2; color: $color-orange; }
     .content { margin-top: 8px; }
   }
 }
