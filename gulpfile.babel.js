@@ -33,8 +33,8 @@ gulp.task("cms", () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task("build", ["css", "js", "hugo", "cms"]);
-gulp.task("build-preview", ["css", "js", "hugo-preview"]);
+gulp.task("build", ["sass", "js", "hugo", "cms"]);
+gulp.task("build-preview", ["sass", "js", "hugo-preview"]);
 
 gulp.task("sass", () => (
   gulp.src("./src/css/*.scss")
