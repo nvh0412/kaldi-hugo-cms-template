@@ -4,7 +4,6 @@
   }
 
   .navbar-header {
-    height: 96px;
     line-height: 1.5rem;
     -webkit-font-smoothing: antialiased;
   }
@@ -16,18 +15,14 @@
       right: 0;
       transform: translateY(-50%);
     }
+
+    .navbar-header {
+      height: 96px;
+    }
   }
 
   .nav-wrap {
-    display: block;
-
     li {
-      &:hover {
-        .sub-menu {
-          display: block;
-        }
-      }
-
       a {
         color: $color-blue-black;
         font-size: 14px;
@@ -104,6 +99,10 @@
       width: 0px;
       height: 14px;
     }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
@@ -151,5 +150,9 @@
         color: #555555;
       }
     }
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 }

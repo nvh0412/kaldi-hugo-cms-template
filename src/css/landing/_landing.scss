@@ -136,7 +136,7 @@ section {
   @media (max-width: 600px) {
     margin-right: auto;
     margin-left: auto;
-    width: 80%;
+    width: 100%;
     font-size: 24px;
   }
 }
@@ -151,8 +151,7 @@ section {
   margin-bottom: 90px;
 
   @media (max-width: 600px) {
-    margin-right: auto;
-    margin-left: auto;
+    margin: 30px auto;
     width: 100%;
   }
 
@@ -364,8 +363,11 @@ section {
 
 .benefits-img {
   text-align: center;
-  img{
-    max-width: 800px;
+  @media (min-width: 600px) {
+    img{
+      margin: auto;
+      max-width: 800px;
+    }
   }
 }
 
