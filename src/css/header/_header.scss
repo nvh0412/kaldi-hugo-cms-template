@@ -9,11 +9,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .navbar-nav {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+  @media (min-width: 600px) {
+    .navbar-nav {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
   }
 
   .nav-wrap {
@@ -27,7 +29,7 @@
       }
 
       a {
-        color: white;
+        color: $color-blue-black;
         font-size: 14px;
         line-height: 31px;
         padding-left: 1.25rem;

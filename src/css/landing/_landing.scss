@@ -13,65 +13,25 @@
 }
 
 .video__featured {
-  &:before {
-    content: '';
-    width: 100%;
-    height: 660px;
-    z-index: -1000;
-    background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
-    transform-origin: left bottom;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-transform: skew(0deg, -15deg);
-    -moz-transform: skew(0deg, -15deg);
-    -ms-transform: skew(0deg, -15deg);
-    -o-transform: skew(0deg, -15deg);
-    transform: skew(0deg, -15deg);
-  }
-
   .contain {
-    background-image: url(https://d125fmws0bore1.cloudfront.net/assets/pages/ndop/nd018/video-bg-nd018-5b3d3b07b74a58ff76503d75b3568908ca9188ce349a9a6c09f1643e46cbfe24.jpg);
+    background-image: url(https://yj4dfcucm3mswcd2nbkkg14m-wpengine.netdna-ssl.com/wp-content/uploads/2016/07/woman-hand-smartphone-desk.jpg);
     background-size: cover;
     border-radius: 0.375rem;
-    height: 620px;
     position: relative;
     background-color: #000;
-    padding: 0;
-
     .video__featured--bg {
-      border-radius: 0.375rem;
       height: 100%;
       width: 100%;
       display: block;
       overflow: hidden;
       position: relative;
-      z-index: 6000;
-      box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.37);
-
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        opacity: 0.90;
-        background-image: linear-gradient(33deg, rgba(1,178,228,0.38) 0%, rgba(28,38,47,0.4) 100%)
-      }
     }
 
     .video__featured--overlay {
-      top: 0;
-      left: 0;
-      width: 100%;
+      position: relative;
       height: 100%;
-      position: absolute;
-      z-index: 7000;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      display: block;
-      background: linear-gradient(to right,rgba(252,184,101,0.8) 0%,rgba(248,153,32,0.4) 100%);
+      padding: 50px 0;
+      background-color: hsla(0, 0%, 25%, 0.76);
     }
   }
 }
@@ -79,10 +39,6 @@
 .video__featured--content {
   display: block;
   width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 !important;
   text-align: center;
 
   p {
@@ -110,7 +66,6 @@
 
 .simplify-section {
   text-align: center;
-  margin-top: 145px;
   padding-bottom: 3.75rem;
 
   h3 {
@@ -145,6 +100,11 @@
 .classroom {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
+
+  @media (max-width: 600px) {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
 
   .icon {
      width: 5rem;
@@ -181,6 +141,13 @@
     text-align: center;
     color: #02b3e4 !important;
   }
+
+  @media (max-width: 600px) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    font-size: 24px;
+  }
 }
 
 .features {
@@ -192,10 +159,20 @@
   margin-top: 60px;
   margin-bottom: 90px;
 
+  @media (max-width: 600px) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+
   .features__column {
     &.ltr {
       float: right;
       padding-left: 1.5rem;
+
+      @media (max-width: 600px) {
+        padding-left: 0;
+      }
     }
   }
 }
@@ -223,6 +200,17 @@
     width: 380px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
   }
+
+  @media (max-width: 600px) {
+    &:after {
+      display: none;
+    }
+
+    img {
+      left: 0;
+      height: auto;
+    }
+  }
 }
 
 .features--module2 {
@@ -232,6 +220,11 @@
     top: 0;
     height: 236px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+
+    @media (max-width: 600px) {
+      right: 0;
+      height: auto;
+    }
   }
 
   &:after {
@@ -243,6 +236,10 @@
     height: 161px;
     width: 380px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
@@ -253,6 +250,11 @@
     top: 0;
     height: 330px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+
+    @media (max-width: 600px) {
+      height: auto;
+      left: 0;
+    }
   }
 
   &:after {
@@ -264,6 +266,10 @@
     height: 209px;
     width: 325px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
@@ -343,7 +349,9 @@
   list-style-type: none;
 
   blockquote {
-    padding: 0 8.125em;
+    @media (min-width: 600px) {
+      padding: 0 8.125em;
+    }
     text-align: center;
     border-left: none;
 
@@ -365,16 +373,15 @@
 
 .benefits-img {
   text-align: center;
-
   img{
     max-width: 800px;
   }
 }
 
 .module-contact {
-  background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2013/06/Amazon-warehouse.jpg);
+  background-image: url(/img/amazon.jpeg);
   background-size: cover;
-  background-position: 50% 5px;
+  background-position: 50% 50%;
   text-align: center;
   color: white;
   margin-top: 3.75rem;
@@ -396,5 +403,19 @@
     line-height: 1.5;
     text-transform: uppercase;
     margin-top: 0.5em;
+  }
+}
+
+.arrow_slider {
+  position: relative;
+}
+
+.benefit-container {
+  margin-top: 50px;
+  text-align: center;
+
+  h3 {
+    font-size: 36px;
+    color: #525d7d;
   }
 }
